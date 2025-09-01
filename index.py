@@ -251,30 +251,76 @@
 
 # List Excercise
 
-sales_w1 = [7,3,42,19,15,35,9]
-sales_w2 = [12,4,26,10,7,28]
-sales = []
-sales_w2.append(int(input("Enter today's sales: ")))
-sales = sales_w1 + sales_w2  # Concatenation of two lists
-# sales = sales_w1.extend(sales_w2) If you want to use extend, you should not assign it to a new variable because it returns none
-print(min(sales) * 1.5) 
-print(max(sales) * 1.5)
-print(min(sales) * 1.5 + max(sales) * 1.5) 
+# sales_w1 = [7,3,42,19,15,35,9]
+# sales_w2 = [12,4,26,10,7,28]
+# sales = []
+# sales_w2.append(int(input("Enter today's sales: ")))
+# sales = sales_w1 + sales_w2  # Concatenation of two lists
+# # sales = sales_w1.extend(sales_w2) If you want to use extend, you should not assign it to a new variable because it returns none
+# print(min(sales) * 1.5) 
+# print(max(sales) * 1.5)
+# print(min(sales) * 1.5 + max(sales) * 1.5) 
 
 
-# Correct code
+# # Correct code
 
-sales_w1a = [7,3,42,19,15,35,9]
-sales_w2a = [12,4,26,10,7,28]
-sales1 = []
-new_day = input('Enter #of lemonades for new day: ')
-sales_w2a.append(int(new_day))
-#sales.extend(sales_w1)
-#sales.extend(sales_w2)
-sales1 = sales_w1a + sales_w2a
-sales1.sort()
-worst_day_prof = min(sales1) * 1.5
-best_day_prof = max(sales1) * 1.5
-print(f'Worst day profit:$ {worst_day_prof}')
-print(f'Best day profit:$ {best_day_prof}')
-print(f'Combined profit:$ {worst_day_prof + best_day_prof}')
+# sales_w1a = [7,3,42,19,15,35,9]
+# sales_w2a = [12,4,26,10,7,28]
+# sales1 = []
+# new_day = input('Enter #of lemonades for new day: ')
+# sales_w2a.append(int(new_day))
+# #sales.extend(sales_w1)
+# #sales.extend(sales_w2)
+# sales1 = sales_w1a + sales_w2a
+# sales1.sort()
+# worst_day_prof = min(sales1) * 1.5
+# best_day_prof = max(sales1) * 1.5
+# print(f'Worst day profit:$ {worst_day_prof}')
+# print(f'Best day profit:$ {best_day_prof}')
+# print(f'Combined profit:$ {worst_day_prof + best_day_prof}')
+
+# Split and Join
+
+# msg ='Welcome  to  Python  101: Split  and Join'
+# csv = 'Eric,John,Michael,Terry,Graham'
+# friends_list = ['Eric','John','Michael','Terry','Graham']
+# print(msg.split()) # Default split by space does not consider multiple spaces
+# print(msg.split(' '), type(msg.split(' '))) # Split by single space considers multiple spaces
+# print(csv.split(',')) # Split by comma
+# print(str(friends_list)) # Convert list to string but not a good way
+# print('-'.join (friends_list)) # Join list elements with '-'
+# print('-'.join(friends_list + friends_list)) # Join list elements with '-' and add first element at the end
+# print(''.join(friends_list)) # Join list elements without any space
+# print(''.join(msg.split())) # Join string elements without any space
+# print(msg.replace (' ', '')) # Replace multiple spaces with single space
+
+# Seperation Task
+# csv = 'Eric,John,Michael,Terry,Graham:TerryG;Brian'
+# print(','.join(csv.split(';')))
+# print(','.join(csv.split(';')).split(':')) 
+# print(','.join(','.join(csv.split(';')).split(':')))
+# print(','.join(','.join(csv.split(';')).split(':')).split(','))
+
+# # OR
+
+# print('replace', csv.replace(';',',').replace(':',',').split(','))
+
+# friends_list = ['Exercise: fill me with names']
+# From the list above fill a list(friends_list) properly
+# with the names of all the friends. One per "slot"
+# you may need to run same command several times
+# use print() statements to work your way through the exercise
+# print(csv.split(','))
+
+
+
+#Tuples - faster Lists you can't change
+friends = ['John','Michael','Terry','Eric','Graham']
+friends_tuple = ('John','Michael','Terry','Eric','Graham')  #immutable
+friends_set = {'Eric', 'John','Michael','Terry','Eric','Graham','Eric'}
+
+print(friends)
+print(friends_tuple)
+print(friends_set)
+
+
